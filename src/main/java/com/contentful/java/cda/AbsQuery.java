@@ -1,6 +1,6 @@
 package com.contentful.java.cda;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import static com.contentful.java.cda.Util.resourcePath;
@@ -10,7 +10,7 @@ abstract class AbsQuery<T extends CDAResource, E extends AbsQuery<T, E>> {
 
   final CDAClient client;
 
-  final Map<String, String> params = new HashMap<String, String>();
+  final Map<String, String> params = new LinkedHashMap<String, String>();
 
   AbsQuery(Class<T> type, CDAClient client) {
     this.type = type;
